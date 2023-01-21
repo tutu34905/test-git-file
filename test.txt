@@ -1,3 +1,4 @@
 Hello my name is tutu.
 I am a developer
 I have duty to decorate feature-1
+I do part 2 alone
