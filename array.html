@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        /*const array1 = [1,2,30,400];
+        const array2 = [1,2,3,4];
+        const array3 = [1,"1",2,{},];
+        const array4 = ["apple","banana","orange"];
+        const array5 = [
+            {name: "apple", age: 14},
+            {name: "banana", age: 18},
+            {name: "watermelon", age: 32}]
+        const array7 = [
+            {name: "apple", surname: "London"},
+            {name: "banana", surname: "Bangkok"},
+            {name: "watermelon", surname: "Singapore"}];
+        const array8 = [1,3,4,5,6,7,8];
+        const array9 = [1,-3,2,8,-4,5];
+        const array10 = [100,200.25,300.84,400.3];
+        const array11 = [
+            {name: "apple", birth: "2000-01-01"},
+            {name: "banana", birth: "1990-10-10"},
+            {name: "watermelon", birth: "1985-12-30"}];
+
+        const array16 = ["apple","banana","orange","pineapple","watermelon"];
+        const array17 = [
+            {name: "apple", age: 14},
+            {name: "banana", age: 18},
+            {name: "watermelon", age: 32},
+            {name: "pineapple", age: 16},
+            {name: "peach", age: 24}];
+        const array21 = ["peach",1,-3,"2",{},[]];
+        const array22 = ["APPLE","appLe","PEACH","PEach"];
+        const array23 = [
+            {name: "apple", birth: "2000-01-01"},
+            {name: "banana", birth: "1990-10-10"},
+            {name: "watermelon", birth: "1985-12-30"},
+            {name: "peach", birth: "2002-10-13"}];
+
+        let arr1 = array1.map(item => item*2);
+        console.log("1.1",arr1);
+        let arr2 = array2.map(item => String(item));
+        console.log("1.2",arr2);
+        let arr3 = array3.map(item => typeof(item));
+        console.log("1,3",arr3);
+        let arr4 = array4.map(item => item.toUpperCase());
+        console.log("1,4",arr4);
+        let arr5 = array5.map(item => item.name);
+        console.log("1.5",arr5);
+        let arr6 = array5.map(item => item.age);
+        console.log("1.6",arr6);
+        let arr7 = array7.map(item => item.name+' '+item.surname)
+        console.log("1.7",arr7);
+        let arr8 = array8.map(item => (item%2==0)? "even" : "odd");
+        console.log("1.8",arr8);
+        let arr9 = array9.map(item => Math.abs(item));
+        console.log("1.9",arr9);
+        let arr10 = array10.map(item => String(item.toFixed(2)));
+        console.log("1.10",arr10);
+       
+        function date1(date){
+            return new Date(date).toGMTString().slice(5,16).toLowerCase();
+        }
+
+        function year(date){
+            let now = new Date(Date.now());
+            let d2 = now.getDate();
+            let m2 = now.getMonth()+1;
+            let y2 = now.getFullYear();
+
+            let start = new Date(date);
+            let d1 = start.getDate();
+            let m1 = start.getMonth()+1;
+            let y1 = start.getFullYear();
+
+            return (m2>m1)? y2-y1 : (m2<m1)? y2-y1-1 : (d2>=d1)? y2-y1 : y2-y1-1;
+            
+        }
+
+        let arr11 = array11.map(item => item.age=year(item.birth));
+       
+        console.log("1.11",array11);
+        /*for(let key in arr11){
+            console.log(new Date(arr11[key]).getFullYear());
+        }*/
+        /*
+        let arr12 = array11.map(item => `<tr> <td>${item.name}</td> <td>${date1(item.birth)}</td> </tr>`);
+        console.log("1.12",arr12);
+
+        let arr13 = array1.filter(item => item>10);
+        console.log("2.1",arr13);
+        let arr14 = array2.filter(item => item%2!==0);
+        console.log("2.2",arr14);
+        let arr15 = array3.filter(item => typeof(item)==="number");
+        console.log("2.3",arr15);
+        let arr16 = array16.filter(item => item.length>6);
+        console.log("2.4",arr16);
+        let arr17 = array17.filter(item => item.age<18);
+        console.log("2.5",arr17);
+        /*for(let key in arr17){
+            console.log(arr17[key]);
+        }*/
+        /*
+        let arr18 = array17.filter(item => item.age!==32);
+        console.log("2.6",arr18);
+        let arr19 = array9.filter(item => item>0);
+        console.log("2.7",arr19);
+        let arr20 = array8.filter(item => item%3===0);
+        console.log("2.8",arr20);
+        let arr21 = array21.filter(item => typeof(item)==='string');
+        console.log("2.9",arr21);
+        let arr22 = array22.filter(item => item===item.toUpperCase());
+        console.log("2.10",arr22);
+        let arr23 = array23.filter(item=> new Date(item.birth).getMonth()+1===10);
+        console.log("2.11",arr23);
+        let arr24 = array23.filter(item => new Date(item.birth).getFullYear()<2000);
+        console.log("2.12",arr24);
+
+        function unique(arr){
+            let set = new Set(arr);
+            return Array.from(set);
+        }
+        let values = ["Hare", "Krishna", "Hare", "Krishna", "Krishna", "Krishna", "Hare", "Hare", "-:O"];
+        //alert( unique(values) );
+
+        function anagram(word1, word2){
+            if(word1.length!=word2.length) return false;
+            let sortword1 = word1.toLowerCase().split("").sort().join("");
+            let sortword2 = word2.toLowerCase().split("").sort().join("");
+            return (sortword1===sortword2)? true : false 
+        }
+        
+        //console.log(anagram('TeaChers','cheAtErs'));
+
+        function reduce(array){
+            let result = new Array(array[0]);
+            array.shift();
+            let startarr = array; 
+            console.log(result);
+            console.log(startarr);
+            for(let item of startarr){
+                sum=0;
+                for(let word of result){
+                    if(anagram(item,word)) {
+                        sum+=1; break;}
+                }
+
+                if(sum===0){
+                    result.push(item)
+                }
+            }
+
+            return result;
+        }
+
+        let user = {
+            name: "John",
+            age: 14,
+            gender: "male",
+            from: "bkk"
+        }
+
+        /*for(let key in user){
+            console.log(key);
+        }*/
+        /*
+        console.log(Object.keys(user));
+        console.log(Object.values(user));
+        //alert(reduce([ "nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"]));
+
+        let salaries = {
+            "John": 100,
+            "Pete": 300,
+            "Mary": 250
+        }
+
+        let user2 = {
+            name: 'John',
+            age: 30
+        }
+        function sumSalaries(salaries) {
+
+            let arrsalaries = Object.values(salaries);
+            const sum = arrsalaries.reduce((partialSum, a) => partialSum + a, 0);
+            return sum;
+            
+        }
+
+        console.log(sumSalaries(salaries));
+
+        function count(obj) {
+            return Object.entries(obj).length;
+        }
+        */
+
+        function myUser(name, birthday){
+            this.name = name;
+            this.birthday = birthday;
+            
+            Object.defineProperty(this, 'age',{
+                get(){
+                    let todayYear = new Date().getFullYear();
+                    let todayMonth = new Date().getMonth()+1;
+                    let todayDate = new Date().getDate();
+                    let firstYear = this.birthday.getFullYear();
+                    let firstMonth = this.birthday.getMonth();
+                    let firstdate = this.birthday.getDate();
+                    return (todayMonth>firstMonth)? todayYear-firstYear : (todayMonth<firstMonth)? todayYear-firstYear-1 : (todayDate>=firstdate)? todayYear-firstYear : todayYear-firstYear-1;
+                }
+            });
+        }
+        
+        let join = new myUser("Oravanya", new Date(1998, 6, 25));
+        console.log(join.age);
+
+        let animal = {
+            eat : true,
+            live : true
+        };
+
+        let rabbit = {
+            jump : true,
+            food : "carrot",
+            __proto__ : animal
+        };
+
+        console.log(rabbit.eat);
+
+        let rabbitKey = Object.keys(rabbit);
+        console.log(rabbitKey);
+
+        for(let key in rabbit){
+            if(rabbit.hasOwnProperty(key)) console.log(key);
+        }
+        
+        let ani = {
+            jumps: null
+        };
+
+        let rab = {
+            jumps: true,
+            __proto__: ani
+        };
+
+        alert(rab.jumps);
+        delete rab.jumps;
+        alert(rab.jumps);
+        delete ani.jumps;
+        alert(rab.jumps);
+        
+        let pockets = {
+            money: 2000
+        };
+
+        let bed = {
+            sheet: 1,
+            pillow: 2,
+            __proto__: pockets
+        };
+
+        let table = {
+            pen: 3,
+            __proto__: bed
+        };
+
+        
+        let head = {
+            glasses: 1,
+            __proto__: table
+        };
+
+    </Script>
+</body>
+</html>

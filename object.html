@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let human = {
+            name : "Oravanya",
+            age : 24,
+            home : "Big house",
+            single : false,
+            "genius score" : 9
+        };
+        
+        /*let obj = {};
+        let keyname = prompt('what key name do you want?');
+        
+        while(keyname !== "stop"){
+            let value = prompt('what value do you want?');
+            obj[keyname]=value;
+            keyname = prompt('what key name do you want?');
+        }
+
+        console.log(obj);
+
+        let obj2 = {};
+        let fruit = prompt('Which fruit to buy?');
+        while (fruit !== 'stop'){
+            let numfruit = prompt('How many do you buy?');
+            if (Number(numfruit)>1) fruit=fruit+'s';
+            obj2[fruit]=numfruit;
+            fruit = prompt('Which fruit to buy?');
+        }
+        console.log(obj2)*/
+
+        let object = {};
+        let object2 = {};
+        object.name="Sonter";
+        object.surname="Pakorn";
+        console.log(object)
+        object.name="Boy"
+        console.log(object);
+        delete object.name;
+        console.log(object);
+
+        let salaries = {
+            John: 100,
+            Ann: 160,
+            Pete: 130,
+            Korn: 'secret'
+        };
+
+        function isEmpty(obj){
+            for (let key in obj){
+                return false;
+            }
+            return true;
+        }
+
+        function sum(obj){
+            let total = 0;
+            for(let key in obj){
+                total += obj[key];
+            }
+            return total;
+        }
+
+        function multiplyNumeric(obj, times){
+            for(let key in obj){
+                if(typeof(obj[key])==="number"){
+                    obj[key] *=times;
+                }
+            }
+            return obj;
+        }
+
+        
+    </script>
+</body>
+</html>

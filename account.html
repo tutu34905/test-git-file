@@ -1,0 +1,407 @@
+<html>
+    <!--<br>:new line--> 
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marietta Brand</title>
+    <link rel="stylesheet" href = "style1.CSS">
+</head>
+<header>
+<div>
+<div class="table4">
+    <center><table class="table4">
+        <tr><td></td>
+        <td><a style="text-decoration: none; font-size: 200%;" href="main.html"><b>MARIETTA</td>
+        <td></td>
+        <td></td>
+        <td><span class="un"><a style="text-decoration: none" href="women.html">Women</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><span class="un"><a style="text-decoration: none" href="men.html">Men</a></span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><span class="un"><a style="text-decoration: none" href="product.html">Bags</span></td>
+        <td></td>
+        <td></td>    
+        <td></td>
+        <td><span class="un"><a style="text-decoration: none" href="collections.html">Collections</span></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><span class="un"><a style="text-decoration: none" href="search.html">Search</span></td>
+        <td><span class="un"><a style="text-decoration: none" href="account.html">Account</span></td>
+        <td><span class="un"><a style="text-decoration: none" href="cart.html">Cart</span></td>
+        </tr>
+        </table></center>         
+
+</div>
+</div>
+
+</header>
+
+<body>
+    
+<script src="main2.js"></script>
+
+<br><br>
+<center><table class="table7" style="line-height: 15px; margin-top: 100px; margin-left: -10px; font-size: 85%;" >
+<tr style="font-size: 130%;">
+    <td>Account</td>
+    <td><a id="hello"></a></td>
+    <td></td>
+</tr>
+<tr><td><hr></td><td><hr></td><td><hr></td></tr>
+<tr>
+    <td></td>
+    <td><a id="advise">Please enter your email</a><span style="float:right;"><a href="account.html" style="color: white;"  id="mainpage">Back to login</span></td>
+</tr>
+<tr>
+    <td></td>
+</tr>
+<tr>
+    <td></td>
+    <td><a id="notmail" style="color: white;">Email</a></td>
+</tr>
+<tr style="line-height: 10px; padding-bottom: 0px;">
+    <td></td>
+    <td><input type="email" placeholder="me@example.com" name="mail" id="email" required><hr id="linemail"></td>
+</tr>
+</table></center>
+
+<div id="signup" style="display: none;">
+<center><table class="table7" style="line-height: 15px; margin-top: 15px; margin-left: -10px; font-size: 85%;" >    
+    <tr>
+        <td></td>
+        <td></td>
+        <td><a id="pass" style="color: rgb(255, 255, 255);">Password</a></td>
+        <td><a id="firmpass" style="color: white;">Confirm Password</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><input type="password" maxlength="8" placeholder="Password" name="password" id="password" required><hr id="linepass" style="width: 90%;"></td>
+        <td><input type="password" maxlength="8" placeholder="Confirm Password" name="firmpassword" id="firmpassword" required><hr id="linefirmpass" style="width: 100%;"></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><a id="fname" style="color: white;">First Name</a></td>
+        <td><a id="lname" style="color: white;">Last Name</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><input type="text" placeholder="First Name" name="fname" id="firstname" required onfocus="this.placeholder = ''"><hr id="linefname" style="width: 90%;"></td>
+        <td><input type="text" placeholder="Last Name" name="lname" id="lastname" required><hr style="width: 100%;" id="linelname" ></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr><td></td></tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><input type="checkbox" style="margin-bottom: 1px;" id="checkbox" onclick="registercolor()"></button><a>&nbsp;Accept all of our policies</a></td>
+        
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    </table></center>
+    <center><table id= "registertable" class="table6" style="line-height: 50px; width: 30.7%; margin-left: -10px">
+
+    <tr>
+        <td colspan="2"><div id="myid"><a id="register" style="cursor: pointer;" onclick="register()">REGISTER</a></div></a></td></td>
+    </tr>
+    </table></center>
+    <br><br>
+</div>
+
+
+    <div id="signin" style="display: none;">
+    <center><table class="table7" style="line-height: 15px; margin-top: 15px; margin-left: -10px; font-size: 85%;" >    
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="2" ><a id="passexist" style="color: rgb(255, 255, 255);">Password</a></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td colspan="2"><input type="password" maxlength="8" placeholder="Password" name="passwordexist" id="passwordexist" required><hr id="linepassexist"><span class="un" style="float:right;"><a style="color: rgb(0, 0, 0); text-decoration: none; cursor: pointer;" onclick="forgetpass()" id="mainpage">I forget</span></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </table></center>
+    <br><br>
+    <center><table id="logintable" class="table6" style="line-height: 50px; width: 30.7%; margin-left: -10px">
+    <tr>
+        <td colspan="2"><div id="myid"><a id="login" style="cursor: pointer;" onclick="customer()">LOGIN</a></div></a></td></td>
+    </tr>
+    </table></center>
+    <br><br>
+    </div>
+
+    <div id="forgetpass" style="display: none;">
+    <br><br>
+    <center><table class="table6" style="line-height: 50px; width: 30.7%; margin-left: -10px">
+    <tr>
+        <td colspan="2" style="background-color: black;"><div id="myid"><a id="reset" style="cursor: pointer; color: white;" onclick="sentreset()">RESET PASSWORD</a></div></a></td></td>
+    </tr>
+    </table></center>
+    <br><br>
+    </div>
+</div>
+<script>
+Listmail=['oravanya34905@gmail.com']
+Listpass=['Tu1414**']
+
+function customer(){
+    mailcus=document.getElementById("email").value;
+    passcus=document.getElementById("passwordexist").value;
+    if(Listmail.includes(mailcus) && passcus=="Tu1414**"){alert("Login Successful")}
+    else{alert("Incorrect password")
+    document.getElementById("passwordexist").value=""}
+
+}
+
+function forgetpass(){
+  document.getElementById("signin").style.display = "none";
+  document.getElementById("signup").style.display = "none";
+  document.getElementById("forgetpass").style.display = "block";
+  document.getElementById("advise").innerHTML = "Click 'RESET PASSWORD' and reset it in your email";
+}
+
+function sentreset(){
+  document.getElementById("signin").style.display = "block";
+  document.getElementById("signup").style.display = "none";
+  document.getElementById("forgetpass").style.display = "none"
+  document.getElementById("mainpage").style.color = "white"
+  document.getElementById("advise").innerHTML = "Please confirm your password";}
+
+canregister=-1;
+function register(){
+  registercolor()
+  if (canregister==1){
+    alert("Register success")
+  }
+  else{
+    alert("You must inform all of questions correctly")
+  }
+}
+
+var myInput = document.getElementById("email");
+
+myInput.onfocus = function() {
+  document.getElementById("notmail").style.color = "gray";
+  document.getElementById("linemail").style.backgroundColor = "gray";}
+
+var input = document.getElementById("email");
+var inputValue = document.getElementById("email").value;
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  inputValue = document.getElementById("email").value;
+  if(inputValue=="")
+  {document.getElementById("notmail").innerHTML = "Email";
+   document.getElementById("notmail").style.color = "red";
+   document.getElementById("linemail").style.backgroundColor = "red";}  
+  else if (inputValue.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
+    {document.getElementById("notmail").innerHTML = "Email"}
+  else{document.getElementById("notmail").innerHTML = "Must be a valid email";
+       document.getElementById("notmail").style.color = "red";
+       document.getElementById("linemail").style.backgroundColor = "red";}}
+
+input.addEventListener("keyup", function() {
+  inputValue = document.getElementById("email").value;
+  if(inputValue=="")
+  {document.getElementById("notmail").innerHTML = "Email";}  
+  else if(inputValue.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
+    {document.getElementById("notmail").innerHTML = "Email";
+    document.getElementById("mainpage").style.color = "black";
+    if(Listmail.includes(inputValue)){document.getElementById("advise").innerHTML = "Please confirm your password";
+    document.getElementById("signin").style.display = "block";
+    document.getElementById("signup").style.display = "none";
+    document.getElementById("forgetpass").style.display = "none"
+    document.getElementById("mainpage").style.color = "white"}
+    else{document.getElementById("advise").innerHTML = "Create your account below";
+    document.getElementById("signup").style.display = "block";
+    document.getElementById("signin").style.display = "none"
+    document.getElementById("forgetpass").style.display = "none";}}
+    
+  
+    else{document.getElementById("notmail").innerHTML = "Must be a valid email";
+    document.getElementById("mainpage").style.color = "white";
+    document.getElementById("advise").innerHTML = "Please enter your email";
+    document.getElementById("signup").style.display = "none";}});
+
+
+var first = document.getElementById("firstname");
+var last = document.getElementById("lastname");
+var pass = document.getElementById("password");
+var passexist = document.getElementById("passwordexist");
+var firm = document.getElementById("firmpassword");
+
+var firstvalue = document.getElementById("firstname").value;
+var lastvalue = document.getElementById("lastname").value;
+var passvalue = document.getElementById("password").value;
+var passexistvalue = document.getElementById("password").value;
+var firmvalue = document.getElementById("firmpassword").value;
+
+first.onfocus = function() {
+  document.getElementById("fname").style.color = "gray";
+  document.getElementById("linefname").style.backgroundColor = "gray";}
+
+last.onfocus = function() {
+  document.getElementById("lname").style.color = "gray";
+  document.getElementById("linelname").style.backgroundColor = "gray";}
+
+pass.onfocus = function() {
+  passvalue = document.getElementById("password").value;
+  if(passvalue==""){
+  document.getElementById("pass").style.color = "gray";
+  document.getElementById("linepass").style.backgroundColor = "gray";}
+
+  else if(!passvalue.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/)){
+  document.getElementById("pass").style.color = "red";
+  document.getElementById("linepass").style.backgroundColor = "red";}
+  
+  else{
+  document.getElementById("pass").style.color = "gray";
+  document.getElementById("linepass").style.backgroundColor = "gray";}}
+
+passexist.onfocus = function() {
+  document.getElementById("passexist").style.color = "gray";
+  document.getElementById("linepassexist").style.backgroundColor = "gray";}  
+
+firm.onfocus = function() {
+  document.getElementById("firmpass").style.color = "gray";
+  document.getElementById("linefirmpass").style.backgroundColor = "gray";}
+
+first.onblur = function() {
+  registercolor();
+  firstvalue = document.getElementById("firstname").value;
+  if(firstvalue=="")
+  {document.getElementById("fname").style.color = "red";
+   document.getElementById("linefname").style.backgroundColor = "red";}}
+
+last.onblur = function() {
+  registercolor();
+  lastvalue = document.getElementById("lastname").value;
+  if(lastvalue=="")
+  {document.getElementById("lname").style.color = "red";
+   document.getElementById("linelname").style.backgroundColor = "red";}}
+
+pass.onblur = function() {
+  registercolor();
+  passvalue = document.getElementById("password").value;
+  if(passvalue=="")
+  {document.getElementById("pass").style.color = "red";
+   document.getElementById("linepass").style.backgroundColor = "red";}}
+
+passexist.onblur = function() {
+  passexistvalue = document.getElementById("passwordexist").value;
+  if(passexistvalue==""){
+  document.getElementById("passexist").style.color = "red";
+  document.getElementById("linepassexist").style.backgroundColor = "red";}  
+  else if(passexistvalue.length==8){
+  document.getElementById("passexist").style.color = "gray";
+  document.getElementById("linepassexist").style.backgroundColor = "gray";}
+  else{
+  document.getElementById("passexist").style.color = "red";
+  document.getElementById("linepassexist").style.backgroundColor = "red";}}
+
+firm.onblur = function() {
+  registercolor();
+  firmvalue = document.getElementById("firmpassword").value;
+  if(firmvalue=="")
+  {document.getElementById("firmpass").style.color = "red";
+   document.getElementById("linefirmpass").style.backgroundColor = "red";}}
+
+firm.addEventListener("keyup", function() {
+   registercolor();
+   firmvalue = document.getElementById("firmpassword").value;
+   passvalue = document.getElementById("password").value;
+
+   if(firmvalue=="") {document.getElementById("firmpass").innerHTML = "Confirm Password"
+    document.getElementById("firmpass").style.color = "gray";
+    document.getElementById("linefirmpass").style.backgroundColor = "gray";}
+
+   else if(firmvalue!=passvalue){document.getElementById("firmpass").innerHTML = "Passwords must match";
+   document.getElementById("firmpass").style.color = "red";
+   document.getElementById("linefirmpass").style.backgroundColor = "red";}
+
+   else {document.getElementById("firmpass").innerHTML = "Confirm Password";
+   document.getElementById("firmpass").style.color = "gray";
+   document.getElementById("linefirmpass").style.backgroundColor = "gray";}});
+
+pass.addEventListener("keyup", function() {
+   registercolor();
+   passvalue = document.getElementById("password").value;
+   if(passvalue=="")
+   {document.getElementById("pass").innerHTML = "Password";
+    document.getElementById("pass").style.color = "gray";
+    document.getElementById("linepass").style.backgroundColor = "gray";} 
+
+   else if(passvalue.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/)) {document.getElementById("pass").innerHTML = "Password";
+   document.getElementById("pass").style.color = "gray";
+   document.getElementById("linepass").style.backgroundColor = "gray";}
+
+   else {document.getElementById("pass").innerHTML = "Password must be 8 characters contain at least 1 digit, 1 special character, 1 lowercase and 1 uppercase letter.";
+   document.getElementById("pass").style.color = "red";
+   document.getElementById("linepass").style.backgroundColor = "red";}});
+
+passexist.addEventListener("keyup", function() {
+  passexistvalue = document.getElementById("passwordexist").value;
+  if(passexistvalue.length<8)
+  {document.getElementById("login").style.color = "black";
+  document.getElementById("logintable").style.backgroundColor = "white";}  
+  else {document.getElementById("login").style.color = "white";
+  document.getElementById("logintable").style.backgroundColor = "black";}  
+});
+
+function registercolor(){
+  var firstvalue = document.getElementById("firstname").value;
+  var lastvalue = document.getElementById("lastname").value;
+  var passvalue = document.getElementById("password").value;
+  var passexistvalue = document.getElementById("password").value;
+  var firmvalue = document.getElementById("firmpassword").value;
+
+if (firstvalue.length>0 && lastvalue.length>0 && firmvalue.length==8 && passvalue.length==8 && document.getElementById("checkbox").checked==true){
+  if(passvalue==firmvalue && passvalue.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/)){
+    document.getElementById("register").style.color = "white";
+    document.getElementById("registertable").style.backgroundColor = "black";
+    canregister=1;
+  }
+  else{
+    document.getElementById("register").style.color = "black";
+    document.getElementById("registertable").style.backgroundColor = "white";
+    canregister=0;
+  }
+}
+else{
+  document.getElementById("register").style.color = "black";
+  document.getElementById("registertable").style.backgroundColor = "white";
+  canregister=0;
+}
+}
+
+
+</script>
+</body>
+
+
+
+</html>

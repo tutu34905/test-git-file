@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>What n do you want?</label>
+    <input type="text" name="n" id="n" style="width: 50px;"></input><br>
+    <p>Answer type 1:&nbsp;</p><a id="result"></a><br>
+    <p>Answer type 2:&nbsp;</p><a id="result2"></a><br>
+    <p>Answer type 3:&nbsp;</p><a id="result3"></a>
+    <br>
+    <br>
+    <p id="2-10"></p>
+    <p id="value"></p>
+    <script>
+        /*
+        let myname = prompt('What is my name?')
+        let result;
+        result=(myname==='oravanya'? "Very Good" : "You don't know me")
+        alert(result);
+        
+        let score = Number(prompt('What your scores?'))
+        let grade;
+        if (score>=80) {grade='A'} else if (score>=70) {grade='B'}
+        else if (score>=60) {grade='C'} else if (score>=50) {grade='D'}
+        else {grade='F'}
+        alert(grade);
+        
+        let age = Number(prompt('How old are you?'))
+        let price;
+        price = (age<18)? 2000 : 3500;
+        alert(price)
+        */
+       
+        function draw1(n){
+            let pattern="";
+            let a=n;
+            while(a>0){
+                pattern+="*";
+                a--;
+            }
+            
+            return pattern;
+        }
+
+        function draw2(n){
+            let pattern="";
+            for(let i=0; i<n; i++){
+                pattern+="*";
+            }
+            
+            return pattern;
+        }
+
+        function draw3(n){       
+            document.getElementById("result3").innerHTML = "";
+            let pattern="";
+            for(let i=0; i<n; i++){
+                pattern+="*";
+            }
+            for(let row=0; row<n; row++){
+                document.getElementById("result3").innerHTML += pattern+'<br>';
+            }
+            return answer;
+            
+        }
+
+        let n1 = document.getElementById("n");
+        n1.addEventListener("keyup", function() {
+            valuen=document.getElementById("n").value;
+            document.getElementById("result").innerHTML = draw1(valuen);
+            document.getElementById("result2").innerHTML = draw2(valuen);
+            document.getElementById("result3").innerHTML = draw3(valuen);
+        });
+
+        /*
+        for(let i=2;i<13;i++){
+            for(let j=1; j<13; j++){
+                document.getElementById("value").innerHTML += `${i} x ${j} = ${i*j}<br>`;
+            }
+            document.getElementById("value").innerHTML += '----------------<br>'
+        }
+
+        for(let i=2;i<=10;i++){
+            document.getElementById("2-10").innerHTML+=String(i)+'<br>';
+        }
+
+        let y=2;
+        while(y<=10){
+            document.getElementById("2-10").innerHTML+=String(y)+'<br>';
+            y++;
+        }
+        
+        let real=14;
+        let guess=0;
+        let num=1;
+        while(guess !== real && num<=5){
+            guess = Number(prompt('What is number?'));
+            if(num==5 && guess!=real){
+                alert('You loss')
+            }
+            else if(guess==real){
+                alert('Correct number');
+            }
+            else if(guess>real){
+                alert('Your guess number is more than correct number');
+            }
+            else{
+                alert('Your guess number is less than correct number');
+            }
+            num+=1;
+        }
+
+        let browser = prompt('What is your browser?');
+        if(browser=='Edge'){
+            alert("You've got the Edge!")
+        }
+        else if(browser=='Chrome'||browser=='Firefox'||browser=='Safari'||browser=='Opera'){
+            alert("We support these browsers too")
+        }
+        else{
+            alert('We hope that this page looks ok!')
+        }
+        */
+       let a = Number(prompt('a?'));
+       switch(a){
+        case 0 : alert(0);
+        break;
+        case 1 : alert(1);
+        break;
+        case 2: case 3: alert('0');
+        break;
+       }
+    </script>
+</body>
+</html>

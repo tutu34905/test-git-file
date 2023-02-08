@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ask = (question,yes,no) => {(confirm(question))? yes(): no()}
+        ask("Do you agree?",function(){alert("You are agreed.")},function(){alert('You are canceled.')})
+
+        let x = Number(prompt('What is x?'));
+        let n = Number(prompt('What is n?'));
+
+        let result=(x, n) => (n<0)? alert('No support') : alert(x**n);
+        result(x, n);
+
+        alert(pow(x, n))
+
+        function pow(x, n) {
+            if(n < 0) return 'No support';
+
+            return x**n;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            display: inline-block;
+            font-size: 18px;
+            letter-spacing: 1.5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="num" name="num"></input>
+    <input type="submit" onclick="draw(), draw2(), draw3(), draw4(), draw5(), draw6(), draw7(), draw8(), draw9(), 
+    draw10(), draw11(), draw12(), draw13(), draw14(), draw15(), draw17(), draw18(), draw19(), draw20(), draw21(),
+    draw22(), draw23(), draw24()" id="submit" name="submit"></input><br>
+    <p>Answer draw():&nbsp;</p><p id="result"></p><hr>
+    <p>Answer draw2():&nbsp;</p><p id="result2"></p><hr>
+    <p>Answer draw3():&nbsp;</p><p id="result3"></p><hr>
+    <p>Answer draw4():&nbsp;</p><p id="result4"></p><hr>
+    <p>Answer draw5():&nbsp;</p><p id="result5"></p><hr>
+    <p>Answer draw6():&nbsp;</p><p id="result6"></p><hr>
+    <p>Answer draw7():&nbsp;</p><p id="result7"></p><hr>
+    <p>Answer draw8():&nbsp;</p><p id="result8"></p><hr>
+    <p>Answer draw9():&nbsp;</p><p id="result9"></p><hr>
+    <p>Answer draw10():&nbsp;</p><p id="result10"></p><hr>
+    <p>Answer draw11():&nbsp;</p><p id="result11"></p><hr>
+    <p>Answer draw12():&nbsp;</p><p id="result12"></p><hr>
+    <p>Answer draw13():&nbsp;</p><p id="result13"></p><hr>
+    <p>Answer draw14():&nbsp;</p><p id="result14"></p><hr>
+    <p>Answer draw15():&nbsp;</p><p id="result15"></p><hr>
+    <p>Answer draw16():&nbsp;</p><p id="result16"></p><hr>
+    <p>Answer draw17():&nbsp;</p><p id="result17"></p><hr>
+    <p>Answer draw18():&nbsp;</p><p id="result18"></p><hr>
+    <p>Answer draw19():&nbsp;</p><p id="result19"></p><hr>
+    <p>Answer draw20():&nbsp;</p><p id="result20"></p><hr>
+    <p>Answer draw21():&nbsp;</p><p id="result21"></p><hr>
+    <p>Answer draw22():&nbsp;</p><p id="result22"></p><hr>
+    <p>Answer draw23():&nbsp;</p><p id="result23"></p><hr>
+    <p>Answer draw24():&nbsp;</p><p id="result24"></p><hr>
+
+<script>
+
+
+    function draw(){
+        let n = Number(document.getElementById('num').value);
+        let answer="";
+        for(let i=0; i<n; i++){
+            answer+="*";
+        }
+        return document.getElementById('result').innerHTML=answer;}
+
+    function draw2(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result2').innerHTML="";
+        let answer="";
+        for(let i=0; i<n; i++){
+            answer+="*";
+        }
+        for(let i=0; i<n; i++){
+            document.getElementById('result2').innerHTML+=answer+'<br>';}}
+
+    function draw3(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result3').innerHTML="";
+        let answer="";
+        for(i=1;i<=n;i++){
+            answer+=String(i);
+        }
+        for(i=1;i<=n;i++){
+            document.getElementById('result3').innerHTML+=answer+'<br>';
+        }
+    }
+
+    function draw4(){
+        let n = Number(document.getElementById('num').value);
+        let answer;
+        document.getElementById('result4').innerHTML="";
+        for(let i=1;i<=n;i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                answer+=String(i);
+            }
+            document.getElementById('result4').innerHTML+=answer+"<br>"
+
+        }
+    }
+
+    function draw5(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result5').innerHTML="";
+        let answer;
+        for(let i=n;i>=1;i--){
+            answer="";
+            for(let j=n;j>=1;j--){
+                answer+=String(i);
+            }
+            document.getElementById('result5').innerHTML+=answer+"<br>";
+        }
+    }
+
+    function draw6(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result6').innerHTML="";
+        let answer;
+        let start = 1;
+        for(let i=1;i<=n;i++){
+            answer="";
+            for(let j=start;j<start+n;j++){
+                answer+=String(j)
+            }
+            start+=n;
+            document.getElementById('result6').innerHTML+=answer+'<br>';
+        }
+    }
+
+    function draw7(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result7').innerHTML="";
+        let answer;
+        let start = n*n;
+        for(let i=1;i<=n;i++){
+            answer="";
+            for(let j=start;j>start-n;j--){
+                answer+=String(j)
+            }
+            start-=n;
+            document.getElementById('result7').innerHTML+=answer+'<br>';
+        }
+    }
+
+    function draw8(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result8').innerHTML="";
+        let answer;
+        let start=0;
+        for(i=1;i<=n;i++){
+            document.getElementById('result8').innerHTML+=String(start)+'<br>';
+            start+=2;
+        }
+    }
+
+    function draw9(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result9').innerHTML="";
+        let start=2;
+        for(i=1;i<=n;i++){
+            document.getElementById('result9').innerHTML+=String(start)+'<br>';
+            start+=2;
+        }
+    }
+
+    function draw10(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result10').innerHTML="";
+        let answer;
+        let a;
+        for(let i=1; i<=n; i++){
+            answer="";
+            a=i;
+            for(let j=1; j<=n; j++){
+                answer+=String(a);
+                a+=i;
+            }
+            document.getElementById('result10').innerHTML+=answer+'<br>';
+        }
+    }
+
+    function draw11(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result11').innerHTML="";
+        let answer;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i==j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result11').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw12(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result12').innerHTML="";
+        let answer;
+        for(let i=n; i>=1; i--){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i==j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result12').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw13(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result13').innerHTML="";
+        let answer;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i<j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result13').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw14(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result14').innerHTML="";
+        let answer;
+        for(let i=n; i>=1; i--){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i<j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result14').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw15(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result15').innerHTML="";
+        let end = n-1
+        let answer;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i>=j){answer+="*"}
+                else{answer+="‒"}
+            }
+            document.getElementById('result15').innerHTML+=answer+"<br>"
+        }
+
+        for(let i=end; i>=1; i--){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i<j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result15').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw17(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result17').innerHTML="";
+        let answer;
+        for(let i=n; i>=1; i--){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i>j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result17').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw18(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result18').innerHTML="";
+        let answer;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(j<i){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result18').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw19(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result19').innerHTML="";
+        let answer;
+        for(let i=n; i>=1; i--){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i>j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result19').innerHTML+=answer+"<br>"
+        }
+
+        for(let i=1; i<=n-1; i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(i>=j){answer+="‒"}
+                else{answer+="*"}
+            }
+            document.getElementById('result19').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw20(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result20').innerHTML="";
+        let answer;
+        let start=1;
+        for(let i=n; i>=1; i--){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(j>=i){answer+=String(start); start+=1}
+                else{answer+="‒"}
+            }
+            document.getElementById('result20').innerHTML+=answer+"<br>"
+        }
+
+        for(let i=1; i<=n-1; i++){
+            answer="";
+            for(let j=1; j<=n; j++){
+                if(j>i){answer+=String(start); start+=1}
+                else{answer+="‒"}
+            }
+            document.getElementById('result20').innerHTML+=answer+"<br>"
+        }
+    }
+
+    function draw21(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result21').innerHTML="";
+        let answer;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=2*n-1; j++){
+                if(j<=n-i || j>=n+i){
+                    answer+="‒";
+                }
+                else{
+                    answer+="*";
+                }
+            }
+            document.getElementById('result21').innerHTML+=answer+"<br>";
+        }
+    }
+
+    function draw22(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result22').innerHTML="";
+        let answer;
+        for(let i=n; i>=1; i--){
+            answer="";
+            for(let j=1; j<=2*n-1; j++){
+                if(j<=n-i || j>=n+i){
+                    answer+="‒";
+                }
+                else{
+                    answer+="*";
+                }
+            }
+            document.getElementById('result22').innerHTML+=answer+"<br>";
+        }
+    }
+
+    function draw23(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result23').innerHTML="";
+        let answer;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=2*n-1; j++){
+                if(j<=n-i || j>=n+i){
+                    answer+="‒";
+                }
+                else{
+                    answer+="*";
+                }
+            }
+            document.getElementById('result23').innerHTML+=answer+"<br>";
+        }
+
+        for(let i=n-1; i>=1; i--){
+            answer="";
+            for(let j=1; j<=2*n-1; j++){
+                if(j<=n-i || j>=n+i){
+                    answer+="‒";
+                }
+                else{
+                    answer+="*";
+                }
+            }
+            document.getElementById('result23').innerHTML+=answer+"<br>";
+        }
+    }
+
+    function draw24(){
+        let n = Number(document.getElementById('num').value);
+        document.getElementById('result24').innerHTML="";
+        let answer;
+        let start=1;
+        for(let i=1; i<=n; i++){
+            answer="";
+            for(let j=1; j<=2*n-1; j++){
+                if(j<=n-i || j>=n+i){
+                    answer+="‒";
+                }
+                else{
+                    answer+=String(start);
+                    start+=1;
+                }
+            }
+            document.getElementById('result24').innerHTML+=answer+"<br>";
+        }
+
+        for(let i=n-1; i>=1; i--){
+            answer="";
+            for(let j=1; j<=2*n-1; j++){
+                if(j<=n-i || j>=n+i){
+                    answer+="‒";
+                }
+                else{
+                    answer+=String(start);
+                    start+=1;
+                }
+            }
+            document.getElementById('result24').innerHTML+=answer+"<br>";
+        }
+    }
+</script>
+</body>
+</html>
